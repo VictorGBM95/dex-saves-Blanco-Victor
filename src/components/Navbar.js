@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import CartWidget from "../components/CartWidget";
 export const Navbar = () => {
     return (
         <header id="top" className="container-fluid d-flex justify-content-around">
@@ -30,7 +31,7 @@ export const Navbar = () => {
                                     <li className="nav-item">
                                         <a className="nav-link" href="pag/Contacto.html">Contáctanos</a>
                                     </li>
-                                    <a className="navbar-brand" href="pag/Carrito.html"><img src="/images/Cart.jpg" alt="D20Logo" width="30" height="24" className="d-inline-block"/></a>
+                                    <CartWidget />
                                 </ul>
                             </div>
                         </div>
