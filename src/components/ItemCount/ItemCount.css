@@ -1,0 +1,21 @@
+.item-count-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+}
+
+.item-count {
+    display: flex;
+    justify-content: space-around;
+}
+
+.item-count label {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.item-count-button-container {
+    display: flex;
+    justify-content: center;
+}
