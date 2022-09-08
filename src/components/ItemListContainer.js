@@ -1,14 +1,21 @@
 import { useState } from "react";
 import ItemCount from "./ItemCount/ItemCount";
+import Item from "./Item/Item";
 
-const ItemListContainer = ({greeting}) => {
-    const [counter, setCounter] = useState(0); //hook
+const ItemListContainer = ({manuales}) => {
 
     return (
-        <>
-        {greeting}
-        <ItemCount />
-        </>
+        <div className="container-lg my-4 main">
+        <div className="row">
+        {
+            manuales.map((manual) => {
+                return(
+                    <Item manual={manual} />
+                )
+            })
+        }
+        </div>
+        </div>
     );
 }
 export default ItemListContainer;
