@@ -1,5 +1,6 @@
 import React from "react";
 import CartWidget from "../components/CartWidget";
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 export const Navbar = () => {
     return (
         <header id="top" className="container-fluid d-flex justify-content-around">
@@ -17,19 +18,19 @@ export const Navbar = () => {
                             <div className="collapse navbar-collapse" id="navbarNav">
                                 <ul className="navbar-nav d-flex justify-content-around" style={{"width": '100%'}}>
                                     <li className="nav-item">
-                                        <a className="nav-link active" aria-current="page" href="index.html">Home</a>
+                                        <Link className="nav-link active" to="/" element={<></>}> Home </Link> 
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="pag/Manuales.html">Manuales</a>
+                                    <Link className="nav-link" to="category/manuales/" element={<></>}> Manuales </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="pag/Dados.html">Dados</a>
+                                    <Link className="nav-link" to="category/dados/" element={<></>}> Dados </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="pag/Minis.html">Miniaturas</a>
+                                    <Link className="nav-link" to="category/miniaturas/" element={<></>}> Miniaturas </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="pag/Contacto.html">Contáctanos</a>
+                                    <Link className="nav-link" to="category/contacto/" element={<></>}> Contáctanos </Link>
                                     </li>
                                     <CartWidget />
                                 </ul>

@@ -9,6 +9,14 @@
     font-weight: 800;
 }
 
+.details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+
 .shop__item:hover, footer .footer__icon img:hover {
     transform: scale(1.1);
     transition-duration: 500ms;
