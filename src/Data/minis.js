@@ -4,7 +4,7 @@ export const minis = [{
     "description": "Miniatura Básica Troll",
     "price": 19.99,
     "category": "minis",
-    "imgSrc": "../images/TrollUnpainted.jpg"
+    "imgSrc": "/images/TrollUnpainted.jpg"
 },
 {
     "id": 1,
@@ -12,7 +12,7 @@ export const minis = [{
     "description": "Miniatura Básica Owlbear",
     "price": 19.99,
     "category": "minis",
-    "imgSrc": "../images/OwlbearUnpainted.jpg"
+    "imgSrc": "/images/OwlbearUnpainted.jpg"
 },
 {
     "id": 2,
@@ -20,7 +20,7 @@ export const minis = [{
     "description": "Set Miniaturas Mimics x2",
     "price": 29.99,
     "category": "minis",
-    "imgSrc": "../images/MimicsUnpainted.jpg"
+    "imgSrc": "/images/MimicsUnpainted.jpg"
 },
 {
     "id": 3,
@@ -28,7 +28,7 @@ export const minis = [{
     "description": "Miniatura Básica Araña Gigante",
     "price": 19.99,
     "category": "minis",
-    "imgSrc": "../images/GiantSpider.jpg"
+    "imgSrc": "/images/GiantSpider.jpg"
 },
 {
     "id": 4,
@@ -36,7 +36,7 @@ export const minis = [{
     "description": "Miniatura Básica Displacer Beast",
     "price": 19.99,
     "category": "minis",
-    "imgSrc": "../images/DisplacerBeastUnpainted.jpg"
+    "imgSrc": "/images/DisplacerBeastUnpainted.jpg"
 },
 {
     "id": 5,
@@ -44,7 +44,7 @@ export const minis = [{
     "description": " Minitarua Hotis el Rakshasa, Demonio Superior",
     "price": 24.99,
     "category": "minis",
-    "imgSrc": "../images/Rakshasa.jpg"
+    "imgSrc": "/images/Rakshasa.jpg"
 },
 {
     "id": 6,
@@ -52,7 +52,7 @@ export const minis = [{
     "description": "Miniatura Edición Limitada Beholder",
     "price": 39.99,
     "category": "minis",
-    "imgSrc": "../images/BeholderPaintedMini.jpg"
+    "imgSrc": "/images/BeholderPaintedMini.jpg"
 },
 {
     "id": 7,
@@ -60,7 +60,7 @@ export const minis = [{
     "description": "Miniatura XL Dragón Blanco Ancestral - Vorugal",
     "price": 59.99,
     "category": "minis",
-    "imgSrc": "../images/Vorugal.jpg"
+    "imgSrc": "/images/Vorugal.jpg"
 },
 {
     "id": 8,
@@ -68,6 +68,6 @@ export const minis = [{
     "description": "Miniatura XL Dragón Rojo Ancestral - Thordak",
     "price": 59.99,
     "category": "minis",
-    "imgSrc": "../images/RedDragonMini.jpg"
+    "imgSrc": "/images/RedDragonMini.jpg"
 }
 ]

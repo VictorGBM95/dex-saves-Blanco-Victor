@@ -1,28 +1,23 @@
 import React, {useState} from 'react'
 import './ItemCount.css'
-const ItemCount = () => {
-    const [counter, setCounter] = useState(0);
+const ItemCount = ({handleCounter}) => {
+    const [counter, setCounter] = useState(1);
 
     const limiteStock = 5;
 
     const handleClick = (value) => {
         const nuevoCounter = value + counter;
-        if (nuevoCounter > -1 && nuevoCounter <= limiteStock) {
+        if (nuevoCounter > 0 && nuevoCounter <= limiteStock) {
             setCounter(nuevoCounter)
         }
     }
 
     const cartAdd = () => {
-        alert(
-            `Se han agregado ${counter} productos al carrito!`
-        )
+        handleCounter(counter)
     }
 
     return (
         <div className='item-count-container'>
-            <div>
-                <p>Player's Handbook</p>
-            </div>
             <div>
                 <div className='item-count'>
                     <label onClick={() => handleClick(-1)}>-</label>
@@ -31,7 +26,7 @@ const ItemCount = () => {
                 </div>
             </div> 
             <div className='item-count-button-container'>
-                <button onClick={cartAdd}>Agregar al Carrito</button>
+                <button className='btn btn-primary' onClick={() => cartAdd()}>Agregar al Carrito</button>
             </div>
         </div>
     )

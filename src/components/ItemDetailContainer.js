@@ -1,4 +1,5 @@
-const ItemDetailContainer = ({item}) => {
+import ItemCount from '../components/ItemCount/ItemCount.js'
+const ItemDetailContainer = ({item, handleCounter}) => {
 
     console.log(item);
     return (
@@ -11,9 +12,7 @@ const ItemDetailContainer = ({item}) => {
                         <h5>{item.title}</h5>
                         <p className="card-text">{item.description}</p>
                         <p className="card-text">${item.price}</p>
-                        <div className="d-flex justify-content-center">
-                            <button className="btn btn-primary">Comprar</button>
-                        </div>
+                        <ItemCount handleCounter={handleCounter}/>
                     </div>
                 </div>
         </div>

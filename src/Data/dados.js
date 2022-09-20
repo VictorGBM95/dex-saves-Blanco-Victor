@@ -5,7 +5,7 @@ export const dados = [
         "description": "Set D20 Metálicos x5",
         "price": 34.99,
         "category": "dados",
-        "imgSrc": "../images/MetallicDice.jpg"
+        "imgSrc": "/images/MetallicDice.jpg"
     },
     {
         "id": 1,
@@ -13,7 +13,7 @@ export const dados = [
         "description": "Set Dados Verdes Marmoleados",
         "price": 9.99,
         "category": "dados",
-        "imgSrc": "../images/GreenMarmolDice.jpg"
+        "imgSrc": "/images/GreenMarmolDice.jpg"
     },
     {
         "id": 2,
@@ -21,7 +21,7 @@ export const dados = [
         "description": "Set Dados Oro Gastado",
         "price": 19.99,
         "category": "dados",
-        "imgSrc": "../images/DadosOroGastado.jpg"
+        "imgSrc": "/images/DadosOroGastado.jpg"
     },
     {
         "id": 3,
@@ -29,7 +29,7 @@ export const dados = [
         "description": "Set Dados Pumpkin Glitter",
         "price": 9.99,
         "category": "dados",
-        "imgSrc": "../images/OrangeGlitterDice.jpg"
+        "imgSrc": "/images/OrangeGlitterDice.jpg"
     },
     {
         "id": 4,
@@ -37,7 +37,7 @@ export const dados = [
         "description": "Set Dados Metal Gastado",
         "price": 19.99,
         "category": "dados",
-        "imgSrc": "../images/SetMetallicDice.png"
+        "imgSrc": "/images/SetMetallicDice.png"
     },
     {
         "id": 5,
@@ -45,7 +45,7 @@ export const dados = [
         "description": "Set Dados Black-Blue",
         "price": 19.99,
         "category": "dados",
-        "imgSrc": "../images/SetMetallicDiceBlackBlue.jpg"
+        "imgSrc": "/images/SetMetallicDiceBlackBlue.jpg"
     },
     {
         "id": 6,
@@ -53,7 +53,7 @@ export const dados = [
         "description": "Set Dados Metal Angélico",
         "price": 24.99,
         "category": "dados",
-        "imgSrc": "../images/MetallicAngelicDice.jpg"
+        "imgSrc": "/images/MetallicAngelicDice.jpg"
     },
     {
         "id": 7,
@@ -61,7 +61,7 @@ export const dados = [
         "description": "Set Dados Cobre",
         "price": 24.99,
         "category": "dados",
-        "imgSrc": "../images/CopperDice.jpg"
+        "imgSrc": "/images/CopperDice.jpg"
     },
     {
         "id": 8,
@@ -69,6 +69,6 @@ export const dados = [
         "description": "Set Dados Morado Marmoleados",
         "price": 9.99,
         "category": "dados",
-        "imgSrc": "../images/PurpleMarmolDice.jpg"
+        "imgSrc": "/images/PurpleMarmolDice.jpg"
     }
 ]

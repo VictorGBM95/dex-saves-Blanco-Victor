@@ -50,6 +50,7 @@ const App = () => {
       <Route path='category/miniaturas/' element={<Miniaturas items={products} />} />
       <Route path='category/contacto/' element={<></>} />
       <Route path='item/:id/' element={<Details items={products} />} />
+      <Route path='cart/' element={() => null} />
     </Routes>
   );
 }
