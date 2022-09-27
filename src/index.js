@@ -15,6 +15,5 @@ root.render(
     <Navbar />
     <App />
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );

@@ -32,7 +32,9 @@ export const Navbar = () => {
                                     <li className="nav-item">
                                     <Link className="nav-link" to="category/contacto/" element={<></>}> Contáctanos </Link>
                                     </li>
-                                    <CartWidget />
+                                    <li className="nav-item">
+                                    <Link className="nav-link" to="cart/" element={<></>}> <CartWidget /> </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

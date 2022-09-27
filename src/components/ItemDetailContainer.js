@@ -1,7 +1,6 @@
 import ItemCount from '../components/ItemCount/ItemCount.js'
 const ItemDetailContainer = ({item, handleCounter}) => {
 
-    console.log(item);
     return (
         <div className="container-lg my-4 main details">
         <div className="col-md-4 shop__item">
