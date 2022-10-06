@@ -10,6 +10,7 @@ import { minis } from './Data/minis.js';
 import { dados } from './Data/dados.js';
 import { CartContext } from './context/cartContext';
 import Cart from './screens/Cart';
+import { db } from './utils/firebaseConfig';
 
 const App = () => {
   const [carrito, setCarrito] = useState([]);
