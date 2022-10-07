@@ -41,7 +41,7 @@ export const minis = [{
 {
     "id": 5,
     "title": "Hotis The Rakshasa",
-    "description": " Minitarua Hotis el Rakshasa, Demonio Superior",
+    "description": "Minitarua Hotis el Rakshasa, Demonio Superior",
     "price": 24.99,
     "category": "minis",
     "imgSrc": "/images/Rakshasa.jpg"

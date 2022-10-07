@@ -11,22 +11,22 @@ import { dados } from './Data/dados.js';
 import { CartContext } from './context/cartContext';
 import Cart from './screens/Cart';
 import { db } from './utils/firebaseConfig';
+import firestoreFetch from './utils/firestoreFetch';
 
 const App = () => {
   const [carrito, setCarrito] = useState([]);
   const [products, setProducts] = useState([]);
-  const [api, setApi] = useState();
   const location = useLocation()
   const getProductsByURL = (pathname) => {
     switch (pathname) {
       case `/category/manuales/`:
-        setApi(libros)
+        hacerLlamada("books")
         break;
       case `/category/dados/`:
-        setApi(dados)
+        hacerLlamada("dados")
         break;
       case `/category/miniaturas/`:
-        setApi(minis)
+        hacerLlamada("minis")
         break;
     }
   }
@@ -34,7 +34,7 @@ const App = () => {
   const inCart = (id, categoria) => !!carrito.find((e) => e.item.id == id && e.item.category == categoria)
 
   const deleteItem = (id, categoria) => {
-    const nuevoCart = carrito.filter((e) => `${e.item.id}-${e.item.category}` !== id + "-" + categoria) 
+    const nuevoCart = carrito.filter((e) => `${e.item.id}-${e.item.category}` !== id + "-" + categoria)
     setCarrito(nuevoCart)
   }
   const emptyCart = () => {
@@ -44,16 +44,16 @@ const App = () => {
   useEffect(() => {
     getProductsByURL(location.pathname)
   }, [location.pathname]);
-  useEffect(() => {
+  const hacerLlamada = (producto) => {
 
     const llamada = new Promise((resolve, reject) => {
-      setTimeout(() => resolve(api), 3000);
+      resolve(firestoreFetch(producto));
     });
 
     llamada.then(result => {
       setProducts(result)
     });
-  }, [api]);
+  }
 
   return (
     <CartContext.Provider value={
