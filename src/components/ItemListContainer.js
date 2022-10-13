@@ -11,7 +11,6 @@ const ItemListContainer = ({items, category}) => {
         {
             items && items.length > 0 && items.map((item) => {
                 const isInCart = contexto.inCart(item.id, category)
-                console.log(isInCart);
                 return(
                     <Item isInCart={isInCart} item={item} />
                 )

@@ -6,12 +6,13 @@ const Details = ({items}) => {
     const context = useContext(CartContext)
     const location = useLocation()
     const navigate = useNavigate()
-    const id = location.pathname.slice(-1)
+    const id = location.pathname.slice(6)
     const product = items.find((item) => item.id == id) 
     const handleCounter = (qty) => {
         context.setCarrito([...context.carrito, {item:product, cantidad:qty}])
         navigate('/cart')
     }
+    console.log(id, items);
     return (
         <>
             <ItemDetailContainer item={product} handleCounter={handleCounter} />
