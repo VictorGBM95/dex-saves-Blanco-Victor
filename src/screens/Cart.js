@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/cartContext";
-import { serverTimestamp, doc, setDoc } from "firebase/firestore";
+import { serverTimestamp, doc, setDoc, collection } from "firebase/firestore";
 import { db } from "../utils/firebaseConfig";
 const Cart = ({ }) => {
     const items = useContext(CartContext)
@@ -21,7 +21,10 @@ const Cart = ({ }) => {
                 })
             }) ,
         }
-        await setDoc(doc(db, "orders", "new-order-id"), order);
+        const newOrderId = doc(collection(db, "orders"))
+        await setDoc(newOrderId, order);
+        alert('Your order was succesfully created!')
+        items.emptyCart()
 
     }
 
