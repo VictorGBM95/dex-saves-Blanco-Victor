@@ -12,7 +12,6 @@ const Details = ({items}) => {
         context.setCarrito([...context.carrito, {item:product, cantidad:qty}])
         navigate('/cart')
     }
-    console.log(id, items);
     return (
         <>
             <ItemDetailContainer item={product} handleCounter={handleCounter} />

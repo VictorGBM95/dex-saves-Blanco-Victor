@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useContext } from "react";
 import { CartContext } from "../context/cartContext";
+import { serverTimestamp, doc, setDoc } from "firebase/firestore";
+import { db } from "../utils/firebaseConfig";
 const Cart = ({ }) => {
+    const items = useContext(CartContext)
+    const createOrder = async () => {
+        const order = {
+            buyer: {
+                name: "Erwe Von Esse",
+                email: "erwevonesse@gmail.com",
+                phone: "55542069"
+            },
+            date: serverTimestamp(),
+            items: items.carrito.map((producto) => {
+                return({
+                    id: producto.item.id,
+                    title: producto.item.title,
+                    price: producto.item.price,
+                    quantity: producto.cantidad,
+                })
+            }) ,
+        }
+        await setDoc(doc(db, "orders", "new-order-id"), order);
+
+    }
 
     return (
         <CartContext.Consumer>
             {
                 (contexto) => {
                     return (
-                        <main style={{fontWeight: "800", background: "rgb(54, 0, 0, 0.8)"}}>
+                        <main style={{ fontWeight: "800", background: "rgb(54, 0, 0, 0.8)" }}>
                             <h1 className="d-flex flex-column align-items-center">Carrito</h1>
                             <div id="carrito">
                                 {
@@ -27,7 +50,7 @@ const Cart = ({ }) => {
                                                     <h3>{e.cantidad}</h3>
                                                 </div>
                                                 <div className="precio-carrito text-light">
-                                                    <p className="card-text">${e.item.price*e.cantidad}</p>
+                                                    <p className="card-text">${e.item.price * e.cantidad}</p>
                                                 </div>
                                             </div>
                                         )
@@ -35,10 +58,10 @@ const Cart = ({ }) => {
                                 }
                             </div>
                             <div className="total-btn">
-                                <div style={{display: "flex", flexDirection: "column"}}>
+                                <div style={{ display: "flex", flexDirection: "column" }}>
                                     <h1>Total</h1>
                                     <div id="total"></div>
-                                    <button className="btn btn-primary" type="button" id="btn-compra">Finalizar Comprar</button>
+                                    <button onClick={createOrder} className="btn btn-primary" type="button" id="btn-compra">Finalizar Compra</button>
                                     <button onClick={() => contexto.emptyCart()} className="btn btn-primary" type="button" id="btn-compra">Vaciar el Carrito</button>
                                 </div>
                             </div>
