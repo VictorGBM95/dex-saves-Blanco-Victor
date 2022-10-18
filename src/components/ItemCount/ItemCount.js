@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './ItemCount.css'
-import { CartContext } from '../../context/cartContext';
+
 const ItemCount = ({handleCounter}) => {
     const [counter, setCounter] = useState(1);
     const limiteStock = 5;

@@ -1,5 +1,5 @@
-import { useEffect, useState, useContext } from 'react';
-import ItemCount from "./ItemCount/ItemCount";
+import { useContext } from 'react';
+
 import Item from "./Item/Item";
 import { CartContext } from '../context/cartContext';
 const ItemListContainer = ({items, category}) => {

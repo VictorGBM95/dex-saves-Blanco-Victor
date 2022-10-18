@@ -1,6 +1,5 @@
 import ItemCount from '../components/ItemCount/ItemCount.js'
-import { db } from '../utils/firebaseConfig';
-import firestoreFetch from '../utils/firestoreFetch';
+
 const ItemDetailContainer = ({item, handleCounter}) => {
     return (
         <div className="container-lg my-4 main details">

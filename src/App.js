@@ -1,16 +1,11 @@
 import { useEffect, useState } from 'react';
-import ItemListContainer from './components/ItemListContainer';
-import { libros } from './Data/manuales.js';
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Miniaturas from './screens/Miniaturas';
 import Dados from './screens/Dados';
 import Manuales from './screens/Manuales';
 import Details from './screens/Details';
-import { minis } from './Data/minis.js';
-import { dados } from './Data/dados.js';
 import { CartContext } from './context/cartContext';
 import Cart from './screens/Cart';
-import { db } from './utils/firebaseConfig';
 import firestoreFetch from './utils/firestoreFetch';
 import Home from './screens/Home';
 import Contacto from './screens/Contacto';

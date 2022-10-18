@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css"
 import CartWidget from "../CartWidget";
-import { BrowserRouter, Switch, Route, Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 export const Navbar = () => {
     return (
         <header id="top" className="container-fluid d-flex justify-content-around">
@@ -10,7 +10,7 @@ export const Navbar = () => {
                     <div className="col-md-12">
                         <nav className="navbar navbar-expand-lg navbar-dark">
                             <div className="container-fluid">
-                                <a className="navbar-brand" href="index.html"><img src="/images/D20Logo.png" alt="D20Logo" width="30" height="24" className="d-inline-block align-text-top" /></a>
+                                <a className="navbar-brand" href=""><img src="/images/D20Logo.png" alt="D20Logo" width="30" height="24" className="d-inline-block align-text-top" /></a>
                                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                                     aria-label="Toggle navigation">
