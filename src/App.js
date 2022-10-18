@@ -13,6 +13,7 @@ import Cart from './screens/Cart';
 import { db } from './utils/firebaseConfig';
 import firestoreFetch from './utils/firestoreFetch';
 import Home from './screens/Home';
+import Contacto from './screens/Contacto';
 
 const App = () => {
   const [carrito, setCarrito] = useState([]);
@@ -71,7 +72,7 @@ const App = () => {
         <Route path='category/manuales/' element={<Manuales items={products} />} />
         <Route path='category/dados/' element={<Dados items={products} />} />
         <Route path='category/miniaturas/' element={<Miniaturas items={products} />} />
-        <Route path='category/contacto/' element={<></>} />
+        <Route path='category/contacto/' element={<Contacto/>} />
         <Route path='item/:id/' element={<Details items={products} />} />
         <Route path='cart/' element={<Cart />} />
       </Routes>

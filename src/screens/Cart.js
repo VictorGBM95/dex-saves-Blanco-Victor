@@ -31,13 +31,12 @@ const Cart = ({ }) => {
         const subTotal = producto.item.price*producto.cantidad;
         return totalAcumulado + subTotal
     },0)
-    console.log(totalCarrito);
     return (
         <CartContext.Consumer>
             {
                 (contexto) => {
                     return (
-                        <main style={{ fontWeight: "800", background: "rgb(54, 0, 0, 0.8)" }}>
+                        <main style={{ "fontWeight": "400", "background": "rgb(54, 0, 0, 0.8)" }}>
                             <h1 className="d-flex flex-column align-items-center">Carrito</h1>
                             <div id="carrito" className="carrito">
                                 {
@@ -64,11 +63,11 @@ const Cart = ({ }) => {
                                 }
                             </div>
                             <div className="total-btn">
-                                <div style={{ display: "flex", flexDirection: "column" }}>
+                                <div style={{ "display": "flex", "flexDirection": "column" }}>
                                     <h1>Total</h1>
-                                    <div id="total">${Math.round(totalCarrito)}</div>
-                                    <button onClick={createOrder} className="btn btn-primary" type="button" id="btn-compra">Finalizar Compra</button>
-                                    <button onClick={() => contexto.emptyCart()} className="btn btn-primary" type="button" id="btn-compra">Vaciar el Carrito</button>
+                                    <div id="total" className="total-number">${Math.round(totalCarrito)}</div>
+                                    <button onClick={() => contexto.emptyCart()} className="btn btn-primary btn-compra" type="button">Vaciar el Carrito</button>
+                                    <button onClick={createOrder} style={{ "width": "250px", "justify": "rgb(54, 0, 0, 0.8)" }}  className="btn btn-primary btn-compra" type="button">Finalizar Compra</button>
                                 </div>
                             </div>
                         </main>
