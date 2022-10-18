@@ -13,13 +13,13 @@ const Cart = ({ }) => {
             },
             date: serverTimestamp(),
             items: items.carrito.map((producto) => {
-                return({
+                return ({
                     id: producto.item.id,
                     title: producto.item.title,
                     price: producto.item.price,
                     quantity: producto.cantidad,
                 })
-            }) ,
+            }),
         }
         const newOrderId = doc(collection(db, "orders"))
         await setDoc(newOrderId, order);
@@ -27,7 +27,11 @@ const Cart = ({ }) => {
         items.emptyCart()
 
     }
-
+    const totalCarrito = items.carrito.reduce((totalAcumulado, producto) => {
+        const subTotal = producto.item.price*producto.cantidad;
+        return totalAcumulado + subTotal
+    },0)
+    console.log(totalCarrito);
     return (
         <CartContext.Consumer>
             {
@@ -35,14 +39,13 @@ const Cart = ({ }) => {
                     return (
                         <main style={{ fontWeight: "800", background: "rgb(54, 0, 0, 0.8)" }}>
                             <h1 className="d-flex flex-column align-items-center">Carrito</h1>
-                            <div id="carrito">
+                            <div id="carrito" className="carrito">
                                 {
                                     contexto.carrito.map((e, i) => {
-                                        console.log(e);
                                         return (
-                                            <div className="producto-del-carro">
-                                                <div class="img-carrito">
-                                                    <img src={e.item.imgSrc} />
+                                            <div className="producto-del-carro col-md-4">
+                                                <div>
+                                                    <img className="img-carrito" src={e.item.imgSrc} />
                                                 </div>
                                                 <div className="texto-carrito">
                                                     <p>{e.item.title}</p>
@@ -63,7 +66,7 @@ const Cart = ({ }) => {
                             <div className="total-btn">
                                 <div style={{ display: "flex", flexDirection: "column" }}>
                                     <h1>Total</h1>
-                                    <div id="total"></div>
+                                    <div id="total">${Math.round(totalCarrito)}</div>
                                     <button onClick={createOrder} className="btn btn-primary" type="button" id="btn-compra">Finalizar Compra</button>
                                     <button onClick={() => contexto.emptyCart()} className="btn btn-primary" type="button" id="btn-compra">Vaciar el Carrito</button>
                                 </div>

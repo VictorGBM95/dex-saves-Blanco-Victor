@@ -12,6 +12,7 @@ import { CartContext } from './context/cartContext';
 import Cart from './screens/Cart';
 import { db } from './utils/firebaseConfig';
 import firestoreFetch from './utils/firestoreFetch';
+import Home from './screens/Home';
 
 const App = () => {
   const [carrito, setCarrito] = useState([]);
@@ -66,7 +67,7 @@ const App = () => {
       }
     }>
       <Routes>
-        {/* <Route index element={<App />}/> */}
+        <Route index element={<Home />}/>
         <Route path='category/manuales/' element={<Manuales items={products} />} />
         <Route path='category/dados/' element={<Dados items={products} />} />
         <Route path='category/miniaturas/' element={<Miniaturas items={products} />} />
